@@ -1,0 +1,563 @@
+/**********************************************************
+  Add Google Fonts
+**********************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800');
+
+
+/**********************************************************
+  Reset Default Properties Start
+**********************************************************/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* Now 1rem = 1em = 10px */
+
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/**********************************************************
+  Reset Default Properties End
+**********************************************************/
+
+
+/**********************************************************
+  Variables Start
+**********************************************************/
+:root {
+
+    /* Theme Colors */
+    --black: #000;
+    --white: #fff;
+    --primary-color: #4cd137;
+    --secondary-color: skyblue;
+    --warning: #f00;
+
+    /* Theme Fonts */
+    --font-family-1: 'Poppins', sans-serif;
+
+    /* Other Variables */
+    --frame-width: 400vw;
+    --track-height: 30vh;
+}
+
+/**********************************************************
+  Variables Start
+**********************************************************/
+
+
+/**********************************************************
+   Wrapper Start
+**********************************************************/
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/**********************************************************
+   Intro Box Start
+**********************************************************/
+.intro-box,
+.portrait-intro-box {
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+:is(.intro-box, .portrait-intro-box) h1 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+    font-size: 5rem;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.play-btn,
+.pause-btn {
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    background-color: var(--white);
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 10px #00000021, -3px -3px 10px #0000001c;
+    padding: 1.1rem 2.2rem;
+    transition: all .3s linear;
+}
+
+@media (hover:hover) {
+
+    .play-btn:hover,
+    .pause-btn:hover {
+        background-color: var(--black);
+    }
+}
+
+/**********************************************************
+   Intro Box End
+**********************************************************/
+
+
+/**********************************************************
+   Portrait Intro Box Start
+**********************************************************/
+.portrait-intro-box {
+    display: none;
+    z-index: 300;
+    background-color: var(--warning);
+}
+
+/**********************************************************
+   Portrait Intro Box Start
+**********************************************************/
+
+/**********************************************************
+   Main Animation Frame Start
+**********************************************************/
+.main-animation-frame {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/**********************************************************
+   Pause Button Start
+**********************************************************/
+.pause-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 80;
+}
+
+
+/**********************************************************
+   Sky Start (Clouds)
+**********************************************************/
+.sky {
+    width: var(--frame-width);
+    height: 100vh;
+    background: var(--secondary-color);
+    background: url("../Assets/Images/sky.jpg");
+    background-size: cover;
+    animation: animate 7s linear infinite;
+}
+
+/**********************************************************
+   Sky End (Clouds) 
+**********************************************************/
+
+
+/**********************************************************
+   Trees Start 
+**********************************************************/
+.trees {
+    width: var(--frame-width);
+    height: calc(var(--track-height) + 50vh);
+    background: var(--primary-color);
+    background: url(../Assets/Images/trees.png);
+    background-size: 150vw 100%;
+    position: absolute;
+    left: 0;
+    bottom: var(--track-height);
+    animation: animate-trees 8s linear infinite;
+    z-index: 50;
+}
+
+/**********************************************************
+   Keyframes to Animate Trees 
+**********************************************************/
+@keyframes animate-trees {
+    0% {
+        bottom: 20vh;
+    }
+
+    10% {
+        bottom: 19vh;
+    }
+
+    20% {
+        bottom: 20vh;
+    }
+
+    50% {
+        bottom: 19vh;
+    }
+
+    70% {
+        bottom: 20vh;
+    }
+
+    90% {
+        bottom: 19vh;
+    }
+
+    100% {
+        bottom: 20vh;
+        transform: translateX(calc(100vw - var(--frame-width)));
+    }
+}
+
+/**********************************************************
+   Trees End
+**********************************************************/
+
+
+/**********************************************************
+   Track Start 
+**********************************************************/
+.track {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: var(--frame-width);
+    height: var(--track-height);
+    background: var(--black);
+    background: url("../Assets/Images/track.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    animation: animate 9s linear infinite;
+    z-index: 50;
+}
+
+/**********************************************************
+   Track End
+**********************************************************/
+
+
+/**********************************************************
+   Vehicles Container
+**********************************************************/
+.vehicles-container {
+    width: 100vw;
+    height: var(--track-height);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 80;
+}
+
+.vehicles-container>div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+/**********************************************************
+   Car Start
+**********************************************************/
+.car {
+    width: 32rem;
+    height: 10rem;
+}
+
+.car-body,
+.bike img,
+.taxi img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/**********************************************************
+   Change Color of Car-2 and Car-3
+**********************************************************/
+.car-2 .car-body {
+    filter: hue-rotate(75deg);
+}
+
+.car-3 .car-body {
+    filter: hue-rotate(300deg);
+}
+
+
+/**********************************************************
+   Car Tyres Start
+**********************************************************/
+.car-left-tyre {
+    Position: absolute;
+    width: 19%;
+    left: 12%;
+    bottom: 0;
+    animation: animate-tyre 0.3s linear infinite;
+}
+
+.car-right-tyre {
+    Position: absolute;
+    width: 19%;
+    right: 19%;
+    bottom: -1%;
+    animation: animate-tyre 0.3s linear infinite;
+}
+
+/**********************************************************
+   Keyframes to Animate Car Tyres 
+**********************************************************/
+@keyframes animate-tyre {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/**********************************************************
+   Car Tyres End
+**********************************************************/
+
+
+/**********************************************************
+   Keyframes to Animate Car-1
+**********************************************************/
+.car-1 {
+    z-index: 2;
+    animation: animate-car-1 18s linear infinite alternate;
+}
+
+@keyframes animate-car-1 {
+    0% {
+        bottom: 59%;
+        left: 2%;
+    }
+
+    30% {
+        bottom: 59%;
+        left: 40%;
+    }
+
+    50% {
+        bottom: 58.5%;
+        left: 60%;
+    }
+
+    80% {
+        bottom: 59%;
+        left: 50%
+    }
+
+    100% {
+        bottom: 59%;
+        left: calc(100vw - 35rem);
+    }
+}
+
+/**********************************************************
+   Keyframes to Animate Car-2
+**********************************************************/
+.car-2 {
+    z-index: 3;
+    animation: animate-car-2 15s linear infinite alternate;
+}
+
+@keyframes animate-car-2 {
+    0% {
+        bottom: 30%;
+        left: 1%;
+    }
+
+    30% {
+        bottom: 30%;
+        left: 30%;
+    }
+
+    50% {
+        bottom: 30.5%;
+        left: 70%;
+    }
+
+    80% {
+        bottom: 30%;
+        left: 20%
+    }
+
+    90% {
+        bottom: 30.5%;
+        left: 60%
+    }
+
+    100% {
+        bottom: 30%;
+        left: calc(100vw - 35rem);
+    }
+}
+
+/**********************************************************
+   Keyframes to Animate Car-3
+**********************************************************/
+.car-3 {
+    z-index: 4;
+    animation: animate-car-3 18s linear infinite alternate;
+}
+
+@keyframes animate-car-3 {
+    0% {
+        bottom: 0%;
+        left: 0%;
+    }
+
+    30% {
+        bottom: 0.3%;
+        left: 20%;
+    }
+
+    50% {
+        bottom: 0%;
+        left: 80%;
+    }
+
+    80% {
+        bottom: 0.6%;
+        left: 50%
+    }
+
+    90% {
+        bottom: 0%;
+        left: 30%
+    }
+
+    100% {
+        bottom: 0%;
+        left: calc(100vw - 50rem);
+    }
+}
+
+/**********************************************************
+   Cars End
+**********************************************************/
+
+
+/**********************************************************
+   Taxi Start
+**********************************************************/
+.taxi {
+    width: 24rem;
+    height: 14rem;
+    z-index: 5;
+    animation: animate-taxi 10s linear infinite alternate;
+}
+
+/**********************************************************
+   Kayframes to Animate Taxi
+**********************************************************/
+@keyframes animate-taxi {
+    0% {
+        bottom: 0.3%;
+        left: 0%;
+    }
+
+    25% {
+        bottom: 0.4%;
+        left: 15%;
+
+    }
+
+    50% {
+        bottom: 0.3%;
+        left: 20%;
+
+    }
+
+    70% {
+        left: 40%;
+    }
+
+    100% {
+        bottom: 0.3%;
+        left: 65%;
+    }
+}
+
+/**********************************************************
+   Taxi End
+**********************************************************/
+
+
+/**********************************************************
+    Bike Start
+**********************************************************/
+.bike {
+    width: 25rem;
+    height: 14rem;
+    z-index: 1;
+    animation: animate-bike-1 13s linear infinite alternate;
+}
+
+/**********************************************************
+   Keyframes to Animate Bike
+**********************************************************/
+@keyframes animate-bike-1 {
+    0% {
+        bottom: 59%;
+        left: 1%;
+    }
+
+    25% {
+        bottom: 59%;
+        left: 15%;
+
+    }
+
+    50% {
+        bottom: 59.3%;
+        left: 30%;
+
+    }
+
+    100% {
+        bottom: 59%;
+        left: 65%;
+    }
+}
+
+/**********************************************************
+    Bike End
+**********************************************************/
+
+
+
+/**********************************************************
+   Common Keyframes to Animate Items Start
+**********************************************************/
+@keyframes animate {
+    100% {
+        transform: translateX(calc(100vw - var(--frame-width)));
+    }
+}

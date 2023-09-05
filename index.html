@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-------------------------------------------------
+       Title
+    -------------------------------------------------->
+    <title>Racing Animation</title>
+
+
+    <!---------------------------------------------------
+       Link External Custom Style Sheets
+  ----------------------------------------------------->
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/mediaQueries.css">
+
+
+</head>
+
+<body>
+
+
+    <!---------------------------------------------------
+      Wrapper Start
+    ----------------------------------------------------->
+    <div class="wrapper">
+
+
+        <!---------------------------------------------------
+             Intro Box Start
+        ----------------------------------------------------->
+        <div class="intro-box">
+            <h1 class="intro-message"> 🖐 Welcome!! <br> Enjoy 😋 the Scene</h1>
+            <button class="play-btn">Play Animation</button>
+        </div>
+        <!--------------------------------------------------- 
+             Intro Box End
+        ----------------------------------------------------->
+
+
+        <!---------------------------------------------------
+             Portrait Intro Box Start
+        ----------------------------------------------------->
+        <div class="portrait-intro-box">
+            <h1 class="portrait-message">🤩 Hey Buddy!! <br>Rotate Your Device 📟 in Landscape Mode to Enjoy Animation</h1>
+        </div>
+        <!---------------------------------------------------
+             Portrait Intro Box End
+        ----------------------------------------------------->
+
+
+
+        <!---------------------------------------------------
+           Main Animation Frame Start
+        ----------------------------------------------------->
+        <main class="main-animation-frame">
+
+            <!---------------------------------------------------
+                Pause Button to Pause Animation
+            ----------------------------------------------------->
+            <button class="pause-btn">Pause Animation</button>
+
+
+            <!---------------------------------------------------
+               Sky Start (Clouds)
+             ----------------------------------------------------->
+            <div class="sky animation-frame"></div>
+            <!---------------------------------------------------
+                Sky End (Clouds)
+             ----------------------------------------------------->
+
+
+            <!---------------------------------------------------
+                Trees Start
+             ----------------------------------------------------->
+            <div class="trees animation-frame"></div>
+            <!---------------------------------------------------
+                Trees End
+             ----------------------------------------------------->
+
+
+            <!---------------------------------------------------
+               Vehicles Container Start
+             ----------------------------------------------------->
+            <div class="vehicles-container">
+
+
+                <!---------------------------------------------------
+                    Car-1
+                ----------------------------------------------------->
+                <div class="car car-1">
+                    <img src="Assets/Images/car_body.png" class="car-body car-body-1" alt="car">
+                    <img class="car-left-tyre car-left-tyre-1" src="Assets/Images/car_wheel_left.png">
+                    <img class="car-right-tyre car-right-tyre-1" src="Assets/Images/car_wheel_right.png">
+                </div>
+
+                <!---------------------------------------------------
+                   Car-2
+                ----------------------------------------------------->
+                <div class="car car-2">
+                    <img src="Assets/Images/car_body.png" class="car-body car-body-2" alt="car">
+                    <img class="car-left-tyre car-left-tyre-2" src="Assets/Images/car_wheel_left.png">
+                    <img class="car-right-tyre car-right-tyre-2" src="Assets/Images/car_wheel_right.png">
+                </div>
+
+                <!---------------------------------------------------
+                   Car-3
+            -   ---------------------------------------------------->
+                <div class="car car-3">
+                    <img src="Assets/Images/car_body.png" class="car-body car-body-3" alt="car">
+                    <img class="car-left-tyre car-left-tyre-3" src="Assets/Images/car_wheel_left.png">
+                    <img class="car-right-tyre car-right-tyre-3" src="Assets/Images/car_wheel_right.png">
+                </div>
+
+                <!---------------------------------------------------
+                 Taxi
+                ----------------------------------------------------->
+                <div class="taxi">
+                    <img src="Assets/Images/taxi.gif" alt="taxi">
+                </div>
+
+                <!---------------------------------------------------
+                  Bike
+                ----------------------------------------------------->
+                <div class="bike bike-1">
+                    <img src="Assets/Images/bike.gif" alt="Bike">
+                </div>
+
+            </div>
+            <!---------------------------------------------------
+               Vehicles Container End
+            ----------------------------------------------------->
+
+
+            <!---------------------------------------------------
+               Track Start
+            ----------------------------------------------------->
+            <div class="track animation-frame"></div>
+            <!---------------------------------------------------
+              Track End
+            ----------------------------------------------------->
+
+        </main>
+        <!---------------------------------------------------
+           Main Animation Frame End
+        ----------------------------------------------------->
+
+
+    </div>
+    <!---------------------------------------------------
+       Wrapper End
+    ----------------------------------------------------->
+
+
+    <!---------------------------------------------------
+       Vehicles Sounds Start
+    ----------------------------------------------------->
+    <audio>
+        <source src="Assets/Sounds/car-horn.mp3" type="audio/mp3">
+    </audio>
+    <audio>
+        <source src="Assets/Sounds/car-horn-2.mp3" type="audio/mp3">
+    </audio>
+    <audio>
+        <source src="Assets/Sounds/bike-sound.mp3" type="audio/mp3">
+    </audio> <audio>
+        <source src="Assets/Sounds/car-sound.mp3" type="audio/mp3">
+    </audio>
+    <!---------------------------------------------------
+       Vehicles Sounds Start
+    ----------------------------------------------------->
+
+
+    <!--------------------------------------------------------------------------------
+       Javascript Cdns And Files For Icons And Other Sources And External Custom Js Files
+    ---------------------------------------------------------------------------------->
+
+
+    <!---------------------------------------------------
+        Link External Custom Js Files
+    ----------------------------------------------------->
+    <script src="Js/script.js"></script>
+
+
+</body>
+
+</html>
