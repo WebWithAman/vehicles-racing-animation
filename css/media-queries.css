@@ -1,0 +1,175 @@
+/*************************************************************
+    Media Queries Start
+**************************************************************/
+
+@media only screen and (min-width:2100px) and (min-height:900px) {
+
+  html {
+    font-size: 100%;
+  }
+
+}
+
+
+@media only screen and (min-width:1850px) and (max-width:2100px) and (min-height:900px) {
+
+  html {
+    font-size: 88%;
+  }
+
+}
+
+
+@media only screen and (min-width:1600px) and (max-width:1850px) and (min-height:900px) {
+
+  html {
+    font-size: 80%;
+  }
+
+}
+
+@media only screen and (min-width:1600px) and (max-height:899px) {
+
+  html {
+    font-size: 75%;
+  }
+
+}
+
+@media only screen and (max-width:1536px) and (min-height:900px) {
+
+  html {
+    font-size: 75%;
+  }
+
+}
+
+
+@media only screen and (max-width:1300px) {
+  .sky {
+    animation-duration: 6s;
+  }
+
+  .trees {
+    animation-duration: 5s;
+
+  }
+
+  .track {
+    animation-duration: 6s;
+  }
+
+}
+
+
+
+@media only screen and (max-width:1300px) and (min-height:900px) {
+
+  html {
+    font-size: 80%;
+  }
+
+}
+
+
+@media only screen and (max-width:900px) and (max-height:899px) {
+
+  html {
+    font-size: 45%;
+  }
+
+}
+
+@media only screen and (max-width:900px) and (max-height:450px) {
+
+  html {
+    font-size: 30%;
+  }
+
+  .play-btn,
+  .pause-btn {
+    font-size: 2rem;
+  }
+
+}
+
+
+
+@media only screen and (max-width:740px) and (max-height:899px) {
+
+  html {
+    font-size: 45%;
+  }
+
+}
+
+
+@media only screen and (max-width:740px) and (max-height:360px) {
+
+  html {
+    font-size: 27%;
+  }
+
+
+
+}
+
+@media only screen and (max-width:475px) {
+
+
+  :is(.intro-box, .portrait-intro-box) h1 {
+    font-size: 3rem !important;
+  }
+
+
+}
+
+
+@media only screen and (max-width:400px) and (max-height:400px) {
+
+  html {
+    font-size: 25%;
+  }
+
+}
+
+
+@media only screen and (max-width:400px) and (max-height:300px) {
+
+  html {
+    font-size: 15%;
+  }
+
+}
+
+
+
+@media only screen and (orientation:portrait) and (max-width:1000px) {
+
+  .portrait-intro-box {
+    display: flex;
+  }
+
+  .main-animation-frame {
+    display: none;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************************************************
+    Media Queries End
+**************************************************************/
