@@ -11,19 +11,22 @@ This is a website that displays a beautiful animation of vehicles racing like ca
 
 This website is built with **HTML**, **CSS**, and **JavaScript**.
 
+
+## Demo
+
+You can see a live demo of the project here: [https://racinganimationbyaman.netlify.app]
+
+
 ## Installation
 
-To run this website locally, you need to have a web server installed on your machine. You can use any web server of your choice, such as [Apache], [Nginx], or [Node.js].
+To run the project locally, you need to clone the GitHub repo and open the index.html file in your browser. You can use the following commands:
 
-To install the website, follow these steps:
+git clone https://github.com/webwithaman/vehicles-racing-animation.git
+cd vehicles-racing-animation-with-sound
+open index.html
 
-1. Clone this repository or download it as a ZIP file
-2. Extract the files to your web server directory
-3. Open your browser and navigate to the URL of your web server
+Alternatively, you can download the zip file of the repo and extract it to your preferred location. Then, open the index.html file in your browser.
 
-## Usage
 
-To use the website, follow these steps:
-
-1. Wait for the animation to load on the screen
-2. Enjoy watching the vehicles race across the screen
+## License
+This project is licensed under the MIT License.
