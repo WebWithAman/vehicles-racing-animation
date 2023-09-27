@@ -173,7 +173,7 @@ html {
     width: var(--frame-width);
     height: 100vh;
     background: var(--secondary-color);
-    background: url("../Assets/Images/sky.jpg");
+    background: url("../assets/images/sky.jpg");
     background-size: cover;
     animation: animate 7s linear infinite;
 }
@@ -190,7 +190,7 @@ html {
     width: var(--frame-width);
     height: calc(var(--track-height) + 50vh);
     background: var(--primary-color);
-    background: url(../Assets/Images/trees.png);
+    background: url(../assets/images/trees.png);
     background-size: 150vw 100%;
     position: absolute;
     left: 0;
@@ -248,7 +248,7 @@ html {
     width: var(--frame-width);
     height: var(--track-height);
     background: var(--black);
-    background: url("../Assets/Images/track.png");
+    background: url("../assets/images/track.png");
     background-size: contain;
     background-repeat: repeat-x;
     animation: animate 9s linear infinite;
